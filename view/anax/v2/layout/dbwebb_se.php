@@ -148,26 +148,14 @@ function endsWith($haystack, $needle)
 
 <?php if (endsWith($_SERVER['REQUEST_URI'], "htdocs/") !== false) : ?>
     <div class="image-cover">
-        <h2 class="landing-img-text">An investment in knowledge pays the best interest.</h2>
+        <div class="landing-img-text">
+            <p>An investment in knowledge pays the best interest.</p>
+            <p>- Benjamin Franklin</p>
+            </div>
         <img class="landing-img" src="img/woods.jpg" alt="">
     </div>
 
 <?php endif; ?>
-
-<!-- flash -->
-<!-- <?php if (regionHasContent("flash")) : ?>
-<div class="outer-wrap outer-wrap-flash">
-    <div class="inner-wrap inner-wrap-flash">
-        <div class="row">
-            <div class="region-flash">
-                <?php renderRegion("flash") ?>
-            </div>
-        </div>
-    </div>
-</div>
-<?php endif; ?> -->
-
-
 
 <!-- breadcrumb -->
 <?php if (regionHasContent("breadcrumb")) : ?>
@@ -331,8 +319,16 @@ $class .= empty($class) ? "" : "has-sidebar";
         };
     }
     else {
-        x[0].classList.add("white-text");
-        y[0].classList.add("white-text");
+        // window.onscroll = function(ev) {
+            // if (window.scrollY >= 0) {
+                x[0].classList.add("color");
+                x[0].classList.remove("white-text");
+            // } else {
+            //     x[0].classList.remove("color");
+            //     // x[0].classList.add("white-text");
+            //     // y[0].classList.add("white-text");
+            // }
+        // }
     }
 
 

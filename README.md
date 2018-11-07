@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Maoo17/ramverk1.svg?branch=master)](https://travis-ci.org/Maoo17/ramverk1)
 # README file for course Ramverk1
 ---
 

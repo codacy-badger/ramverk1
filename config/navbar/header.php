@@ -29,5 +29,10 @@ return [
             "url" => "verktyg",
             "title" => "Verktyg och möjligheter för utveckling.",
         ],
+        [
+            "text" => "Validator",
+            "url" => "ip",
+            "title" => "Validator for ip.",
+        ]
     ],
 ];

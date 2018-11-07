@@ -5,12 +5,42 @@ body {
     color: rgb(236, 236, 236);
 }
 
-h2 {
+h1 {
+    font-family: 'Raleway', sans-serif;
+    border: none;
+}
+
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif;
     border-bottom: none;
 }
 
 h4 {
     background-image: none !important;
+}
+
+.underline {
+    border-bottom: 1px solid rgb(246, 246, 246);
+}
+
+
+.xdebug-var-dump {
+    margin-top: 3em;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-margin-right {
+    margin-right: 5em;
 }
 
 .black-text {
@@ -36,7 +66,7 @@ h4 {
     position: fixed;
     top: 0;
     z-index: 4;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: fadein2;
 }
 
@@ -60,7 +90,7 @@ h4 {
 .landing-img-text {
     position: absolute !important;
     margin-top: 11% !important;
-    margin-left: 10% !important;
+    margin-left: 50% !important;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
     animation-duration: 6s;
@@ -80,13 +110,10 @@ h4 {
 
 .color {
     background-color: rgb(236, 236, 236);
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: fadein;
 }
 
-.color {
-
-}
 
 code {
     background-color: rgb(43, 43, 43);

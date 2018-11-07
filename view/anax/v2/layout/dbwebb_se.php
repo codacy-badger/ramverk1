@@ -54,14 +54,9 @@ if ($flashMessage) {
 // Get current route to make as body class
 $route = "route-" . str_replace("/", "-", $di->get("request")->getRoute());
 
-function endsWith($haystack, $needle)
-{
-    $length = strlen($needle);
-    if ($length == 0) {
-        return true;
-    }
 
-    return (substr($haystack, -$length) === $needle);
+if (!function_exists('endsWith')) {
+    include_once("func.php");
 }
 
 ?><!doctype html>
@@ -87,6 +82,8 @@ function endsWith($haystack, $needle)
     <?php endif; ?>
 
 </head>
+
+
 
 <body <?= classList($bodyClass, $route) ?>>
 
@@ -146,16 +143,24 @@ function endsWith($haystack, $needle)
 </div>
 <?php endif; ?>
 
-<?php if (endsWith($_SERVER['REQUEST_URI'], "htdocs/") !== false) : ?>
-    <div class="image-cover">
-        <div class="landing-img-text">
-            <p>An investment in knowledge pays the best interest.</p>
-            <p>- Benjamin Franklin</p>
-            </div>
-        <img class="landing-img" src="img/woods.jpg" alt="">
-    </div>
 
-<?php endif; ?>
+<div id="cover">
+
+</div>
+<script>
+    var ele = document.getElementsByClassName("route-");
+    if (ele[0].className.endsWith("route-") !== false) {
+        var divs = `<div class="image-cover">
+            <div class="landing-img-text">
+                <p>An investment in knowledge pays the best interest.</p>
+                <p>- Benjamin Franklin</p>
+                </div>
+            <img class="landing-img" src="img/table.jpg" alt="">
+        </div>`;
+        var div = document.getElementById("cover");
+        div.innerHTML += divs;
+    }
+</script>
 
 <!-- breadcrumb -->
 <?php if (regionHasContent("breadcrumb")) : ?>
@@ -308,7 +313,7 @@ $class .= empty($class) ? "" : "has-sidebar";
     var y = document.getElementsByClassName("rm-button");
     if (window.location.href.endsWith('htdocs/')) {
         window.onscroll = function(ev) {
-            if (window.scrollY >= 400) {
+            if (window.scrollY >= 500) {
                 x[0].classList.add("color");
                 x[0].classList.add("black-text");
                 y[0].classList.add("white-text");
